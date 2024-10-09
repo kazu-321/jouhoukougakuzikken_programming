@@ -7,4 +7,5 @@ int bronze[100];
 
 int main(void){
     printf("hello\n");
+    input();
 }
