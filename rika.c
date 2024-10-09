@@ -41,7 +41,7 @@ void load(){
         return -1;
     }
     for (i = 0; i < num; i++){
-        fprintf(fp, "%s, %d, %d, %d, %d\n", country[i], gold[i], silver[i], bronze[i], total[i])
+        fprintf(fp, "%s, %d, %d, %d, %d\n", country[i], gold[i], silver[i], bronze[i], total[i]);
     }
 
     fclose(fp);
