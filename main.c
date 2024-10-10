@@ -59,19 +59,21 @@ int main(int argc, char* argv[]){
 
 
 void printd(const char *format, ...) {
-    // 可変引数を処理するための準備
-    va_list args;
-    va_start(args, format);
+    if(debug_mode){
+        // 可変引数を処理するための準備
+        va_list args;
+        va_start(args, format);
 
-    // デバッグメッセージの前に追加する文字列
-    printf("\033[2m[DEBUG] ");
+        // デバッグメッセージの前に追加する文字列
+        printf("\033[2m[DEBUG] ");
 
-    // vprintfを使用して可変引数に対応する形でフォーマットされた出力を行う
-    vprintf(format, args);
+        // vprintfを使用して可変引数に対応する形でフォーマットされた出力を行う
+        vprintf(format, args);
 
-    // デバッグメッセージの終わりに追加する文字列
-    printf("\033[0m");
+        // デバッグメッセージの終わりに追加する文字列
+        printf("\033[0m");
 
-    // 可変引数の処理を終了
-    va_end(args);
+        // 可変引数の処理を終了
+        va_end(args);
+    }
 }
