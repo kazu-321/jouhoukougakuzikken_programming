@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-
-
-char country[30][100];
-int gold[100], silver[100], bronze[100], total[100];
-char garbage[100][100];
-
+#include "main.h"
 
 // 配列をスワップするためのヘルパー関数
 void swap(int* x, int* y) {
@@ -23,11 +16,9 @@ void swap_str(char* str1, char* str2) {
 
 // ソート関数（クイックソートの仕組みを使用）
 void sort(int mode) {
-    int n = sizeof(gold) / sizeof(gold[0]);
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
+    for (int i = 0; i < data_size - 1; i++) {
+        for (int j = i + 1; j < data_size; j++) {
             int swap_needed = 0;
-
             if (mode == 0) {
                 // 国名順(A~Z)にソート
                 if (strcmp(country[i], country[j]) > 0) {
