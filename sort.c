@@ -1,3 +1,4 @@
+#include "main.h"
 // int配列の値をスワップするための関数
 void swap(int* x, int* y) {
     int temp = *x;
