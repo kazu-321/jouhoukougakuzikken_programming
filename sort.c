@@ -1,12 +1,13 @@
 #include "main.h"
 
-// 配列をスワップするためのヘルパー関数
+// int配列の値をスワップするための関数
 void swap(int* x, int* y) {
     int temp = *x;
     *x = *y;
     *y = temp;
 }
 
+// char*配列の値をスワップするための関数
 void swap_str(char* str1, char* str2) {
     char temp[100];
     strcpy(temp, str1);
@@ -14,7 +15,7 @@ void swap_str(char* str1, char* str2) {
     strcpy(str2, temp);
 }
 
-// ソート関数（クイックソートの仕組みを使用）
+// ソート関数（クイックソート）
 void sort(int mode) {
     for (int i = 0; i < data_size - 1; i++) {
         for (int j = i + 1; j < data_size; j++) {
@@ -40,7 +41,6 @@ void sort(int mode) {
                     swap_needed = 1;
                 }
             }
-
             // 交換が必要な場合
             if (swap_needed) {
                 swap_str(country[i], country[j]); // 国名をスワップ
