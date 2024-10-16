@@ -1,6 +1,6 @@
 #include "main.h"
 
-country_data_type data[100];
+country_data_type data[1000];
 int data_size=0;
 int debug_mode=0;
 
@@ -52,6 +52,12 @@ int main(int argc, char* argv[]){
             show_medalrank();
         }else if(strcmp(command,"search")==0){
             search();
+        }else if(strcmp(command,"load")==0){
+            char filename[100];
+            printf("ファイル名を入力してください >>> ");
+            scanf("%s",filename);
+            printd("load data start\n");
+            load(filename);
         }else if(strcmp(command,"exit")==0){
             printd("プログラムを終了します\n");
             break;
@@ -85,11 +91,11 @@ void printd(const char *format, ...) {
 
 void show(){
     printd("show data\n");
-    printf("+----------------------------------------------+\n");
-    printf("|      国名       |  金  |  銀  |  銅  |ﾒﾀﾞﾙﾗﾝｸ|\n");
-    printf("+-----------------+------+------+------+-------+\n");
+    printf("+---------------------------------------------------+\n");
+    printf("|      国名            |  金  |  銀  |  銅  |ﾒﾀﾞﾙﾗﾝｸ|\n");
+    printf("+----------------------+------+------+------+-------+\n");
     for(int i=0;i<data_size;i++){
-        printf("| %15s |  %02d  |  %02d  |  %02d  |  %02d  |\n",data[i].country,data[i].gold,data[i].silver,data[i].bronze,data[i].medal_rank);
+        printf("| %20s |  %02d  |  %02d  |  %02d  |  %3d  |\n",data[i].country,data[i].gold,data[i].silver,data[i].bronze,data[i].medal_rank);
     }
-    printf("+--------------------------------------+\n");
+    printf("+---------------------------------------------------+\n");
 }

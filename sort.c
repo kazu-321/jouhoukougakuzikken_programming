@@ -1,17 +1,10 @@
 #include "main.h"
-// int配列の値をスワップするための関数
-void swap(int* x, int* y) {
-    int temp = *x;
+
+void swap_country_data(country_data_type* x, country_data_type* y) {
+    country_data_type temp;
+    temp = *x;
     *x = *y;
     *y = temp;
-}
-
-// char*配列の値をスワップするための関数
-void swap_str(char* str1, char* str2) {
-    char temp[100];
-    strcpy(temp, str1);
-    strcpy(str1, str2);
-    strcpy(str2, temp);
 }
 
 // パーティション関数
@@ -41,17 +34,11 @@ int partition(int low, int high, int mode) {
 
         if (compare) {
             i++;
-            swap_str(data[i].country,data[j].country); // 国名をスワップ
-            swap(&data[i].gold, &data[j].gold);         // 金メダル数をスワップ
-            swap(&data[i].silver, &data[j].silver);     // 銀メダル数をスワップ
-            swap(&data[i].bronze, &data[j].bronze);     // 銅メダル数をスワップ
+            swap_country_data(&data[i], &data[j]);
         }
     }
 
-    swap_str(data[i + 1].country, data[high].country);
-    swap(&data[i + 1].gold, &data[high].gold);
-    swap(&data[i + 1].silver, &data[high].silver);
-    swap(&data[i + 1].bronze, &data[high].bronze);
+    swap_country_data(&data[i + 1], &data[high]);
 
     return i + 1;
 }
