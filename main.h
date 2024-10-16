@@ -24,4 +24,5 @@ void load(char* filename);      // ファイルからデータを読み込む関
 void save(char* filename);      // ファイルにデータを保存する関数
 int get_medalrank(int index);   // メダルランク順位を取得する関数
 void show();                    // データ表示関数
+void show_medalrank();          // メダルランク表示関数
 #endif
