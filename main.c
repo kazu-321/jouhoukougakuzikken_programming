@@ -46,14 +46,7 @@ int main(int argc, char* argv[]){
             printf("\033[A\033[K\033[A\033[K");            
             printf("ソート完了 (モード: %d)\n",mode);
         }else if(strcmp(command,"show")==0){
-            printd("show data\n");
-            printf("+--------------------------------------+\n");
-            printf("|      国名       |  金  |  銀  |  銅  |\n");
-            printf("+-----------------+------+------+------+\n");
-            for(int i=0;i<data_size;i++){
-                printf("| %15s |  %02d  |  %02d  |  %02d  |\n",country[i],gold[i],silver[i],bronze[i]);
-            }
-            printf("+--------------------------------------+\n");
+            show();
         }else if(strcmp(command,"exit")==0){
             printd("プログラムを終了します\n");
             break;
@@ -83,4 +76,15 @@ void printd(const char *format, ...) {
         // 可変引数の処理を終了
         va_end(args);
     }
+}
+
+void show(){
+    printd("show data\n");
+    printf("+--------------------------------------+\n");
+    printf("|      国名       |  金  |  銀  |  銅  |\n");
+    printf("+-----------------+------+------+------+\n");
+    for(int i=0;i<data_size;i++){
+        printf("| %15s |  %02d  |  %02d  |  %02d  |\n",country[i],gold[i],silver[i],bronze[i]);
+    }
+    printf("+--------------------------------------+\n");
 }
