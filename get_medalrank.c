@@ -6,7 +6,7 @@ int get_medalrank(int index){
     sort(1);
     int i;
     for(i=0;i<=100;i++){
-        medal_rank[i]=i+1
+        medal_rank[i]=i+1;
     }
     return medal_rank[index];
 }
