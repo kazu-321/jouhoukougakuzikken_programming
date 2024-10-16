@@ -39,6 +39,7 @@ int main(int argc, char* argv[]){
         }else if(strcmp(command,"input")==0){
             printd("input data start\n");
             input();
+            printd("input data end\n");
             for(int i=0;i<5;i++) printf("\033[A\033[K");
             printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,country[data_size-1],gold[data_size-1],silver[data_size-1],bronze[data_size-1],get_medalrank(data_size-1));
         }else if(strcmp(command,"sort")==0){
