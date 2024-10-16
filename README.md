@@ -8,17 +8,38 @@
 
 # TODO
 - [ ] プログラムの統合(kazu-321)
-- [ ] メダル獲得情報の入力(kawawarika)
+- [x] メダル獲得情報の入力(kawawarika)
 - [ ] メダル順位の順に、メダル獲得情報を一覧表示()
 - [ ] 総獲得メダルの多い順にメダル獲得情報と総獲得数を一覧表示()
 - [ ] 国名を入力すると、該当国のメダル順位と各獲得メダル数を表示(len-0202)
 - [ ] 国名順にメダル獲得情報を一覧表示()
 - [ ] メダル獲得情報をCSV形式ファイルとして読み込み・書き込み
 
+# RUN IN COLAB
+[Colaboratoryで実行](https://colab.research.google.com/github/kazu-321/jouhoukougakuzikken_programming/blob/main/colab.ipynb)
 
-# gitの使い方
-## リモートの変更をダウンロードする
+# ビルドコマンド
+```bash
+gcc main.c input.c sort.c
+```
 
-## mainの変更を自分のブランチに持ってくる
+# 実行
+```bash
+./a.out
+```
 
-## mergeで干渉したとき
+# デバッグ
+```bash
+./a.out debug
+```
+
+## プログラム内
+```c
+printf("hello %s","world");
+```
+の代わりに
+```c
+printd("hello %s","world");
+```
+とすると、標準では出力されなくなります。  
+`./a.out debug`と、debugという引数が追加された場合のみprintd関数の出力がされます。
