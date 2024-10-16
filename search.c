@@ -6,12 +6,12 @@ void search(){
     printf("国名を入力 >>>"); scanf("%s",name);
     
     for(int i=0;i<=data_size;i++){
-        if(strcmp(name,country[i])==0){
-            printf("国名：%s\n",country[i]);
-            printf("メダル順位：%2d位",medal_rank[i]);
-            printf("金：%2d個\n",gold[i]);
-            printf("銀：%2d個\n",silver[i]);
-            printf("銅：%2d個\n",bronze[i]);
+        if(strcmp(name,data[i].country)==0){
+            printf("国名：%s\n",data[i].country);
+            printf("メダル順位：%2d位",data[i].medal_rank);
+            printf("金：%2d個\n",data[i].gold);
+            printf("銀：%2d個\n",data[i].silver);
+            printf("銅：%2d個\n",data[i].bronze);
 
             break;
         }
