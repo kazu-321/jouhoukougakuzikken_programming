@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-
-char country[30][100];
-int gold[100];
-int silver[100];
-int bronze[100];
-int medal_rank[100];
+#include "main.h"
 
 int get_medalrank(){
     sort(3);
@@ -14,10 +7,9 @@ int get_medalrank(){
 
     int i;
     for(i=0;i<=100;i++){
-        medal_rank[i]=i+1
+        medal_rank[i]=i+1 ;
     }
 
-        
-    return　0;
+    return 0;
 
 }
