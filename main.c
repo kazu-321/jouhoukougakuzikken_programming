@@ -23,19 +23,23 @@ int main(int argc, char* argv[]){
         printd("input command: %s\n",command);
         if(strcmp(command,"help")==0){
             printd("show help\n");
-            printf("+-------------------------------------+\n");
-            printf("| コマンド | 説明                      |\n");
-            printf("+----------+---------------------------+\n");
-            printf("| help     | ヘルプを表示します        |\n");
-            printf("| input    | データを追加します        |\n");
-            printf("| sort     | データをソートします      |\n");
-            printf("| show     | データ一覧を表示します(-h)|\n");
-            printf("| search   | データを検索します        |\n");
-            printf("| exit     | プログラムを終了します    |\n");
-            printf("+--------------------------------------+\n");
+            printf("+----------------+---------------------------+\n");
+            printf("| コマンド       | 説明                      |\n");
+            printf("+----------------+---------------------------+\n");
+            printf("| help           | ヘルプを表示します        |\n");
+            printf("| input          | データを追加します        |\n");
+            printf("| sort           | データをソートします      |\n");
+            printf("| show           | データ一覧を表示します    |\n");
+            printf("| show_medalrank | メダルランク順に表示します|\n");
+            printf("| search         | データを検索します        |\n");
+            printf("| exit           | プログラムを終了します    |\n");
+            printf("| load           | データを読み込みます      |\n");
+            printf("| save           | データを保存します        |\n");
+            printf("+----------------+---------------------------+\n");
         }else if(strcmp(command,"input")==0){
             printd("input data start\n");
             input();
+            printd("input data end\n");
             for(int i=0;i<5;i++) printf("\033[A\033[K");
             printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,country[data_size-1],gold[data_size-1],silver[data_size-1],bronze[data_size-1],get_medalrank(data_size-1));
         }else if(strcmp(command,"sort")==0){
@@ -48,14 +52,7 @@ int main(int argc, char* argv[]){
             printf("ソート完了 (モード: %d)\n",mode);
         }else if(strcmp(command,"show")==0){
             show();
-        }else if(strcmp(command,"show -h")==0){
-            printf("+---------------------------------------+\n");
-            printf("|    引数     |   説明                  |\n");
-            printf("+-------------+-------------------------+\n");
-            printf("| -h          | ヘルプを表示します      |\n");
-            printf("| --medalrank | メダルランクを表示します|\n");
-            printf("+---------------------------------------+\n");
-        }else if(strcmp(command,"show --medalrank")==0){
+        }else if(strcmp(command,"show_medalrank")==0){
             show_medalrank();
         }else if(strcmp(command,"exit")==0){
             printd("プログラムを終了します\n");
