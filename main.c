@@ -54,6 +54,8 @@ int main(int argc, char* argv[]){
             show();
         }else if(strcmp(command,"show_medalrank")==0){
             show_medalrank();
+        }else if(strcmp(command,"search")==0){
+            search();
         }else if(strcmp(command,"exit")==0){
             printd("プログラムを終了します\n");
             break;
@@ -87,11 +89,11 @@ void printd(const char *format, ...) {
 
 void show(){
     printd("show data\n");
-    printf("+--------------------------------------+\n");
-    printf("|      国名       |  金  |  銀  |  銅  |\n");
-    printf("+-----------------+------+------+------+\n");
+    printf("+----------------------------------------------+\n");
+    printf("|      国名       |  金  |  銀  |  銅  |ﾒﾀﾞﾙﾗﾝｸ|\n");
+    printf("+-----------------+------+------+------+-------+\n");
     for(int i=0;i<data_size;i++){
-        printf("| %15s |  %02d  |  %02d  |  %02d  |\n",country[i],gold[i],silver[i],bronze[i]);
+        printf("| %15s |  %02d  |  %02d  |  %02d  |  \n",country[i],gold[i],silver[i],bronze[i]);
     }
     printf("+--------------------------------------+\n");
 }
