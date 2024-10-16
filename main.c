@@ -37,7 +37,7 @@ int main(int argc, char* argv[]){
             input();
             printd("input data end\n");
             for(int i=0;i<5;i++) printf("\033[A\033[K");
-            printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,[data_size-1],gold[data_size-1],silver[data_size-1],bronze[data_size-1],get_medalrank(data_size-1));
+            printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,data[data_size-1].country,data[data_size-1].gold,data[data_size-1].silver,data[data_size-1].bronze,get_medalrank(data_size-1));
         }else if(strcmp(command,"sort")==0){
             printd("sort data\n");
             printf("ソートモードを入力してください 0:国順, 1:金, 2:銀, 3:銅\n>>> ");
@@ -89,7 +89,7 @@ void show(){
     printf("|      国名       |  金  |  銀  |  銅  |ﾒﾀﾞﾙﾗﾝｸ|\n");
     printf("+-----------------+------+------+------+-------+\n");
     for(int i=0;i<data_size;i++){
-        printf("| %15s |  %02d  |  %02d  |  %02d  |  %02d  |\n",country[i],gold[i],silver[i],bronze[i],medal_rank[i]);
+        printf("| %15s |  %02d  |  %02d  |  %02d  |  %02d  |\n",data[i].country,data[i].gold,data[i].silver,data[i].bronze,data[i].medal_rank);
     }
     printf("+--------------------------------------+\n");
 }
