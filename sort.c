@@ -16,10 +16,10 @@ void swap_str(char* str1, char* str2) {
 
 // パーティション関数
 int partition(int low, int high, int mode) {
-    int pivot = (mode == 0) ? strcmp(country[high], country[low]) 
-                : (mode == 1) ? gold[high]
-                : (mode == 2) ? silver[high]
-                : bronze[high];
+    int pivot = (mode == 0) ? strcmp(data[high].country, data[low].country) 
+                : (mode == 1) ? data[high].gold
+                : (mode == 2) ? data[high].silver
+                : data[high].bronze;
 
     int i = low - 1;
 
@@ -27,31 +27,31 @@ int partition(int low, int high, int mode) {
         int compare = 0;
         if (mode == 0) {
             // 国名順 (A~Z)
-            if (strcmp(country[j], country[high]) < 0) compare = 1;
+            if (strcmp(data[j].country, data[high].country) < 0) compare = 1;
         } else if (mode == 1) {
             // 金メダル数で比較
-            if (gold[j] > gold[high]) compare = 1;
+            if (data[j].gold > data[high].gold) compare = 1;
         } else if (mode == 2) {
             // 銀メダル数で比較
-            if (silver[j] > silver[high]) compare = 1;
+            if (data[j].silver > data[high].silver) compare = 1;
         } else if (mode == 3) {
             // 銅メダル数で比較
-            if (bronze[j] > bronze[high]) compare = 1;
+            if (data[j].bronze > data[high].bronze) compare = 1;
         }
 
         if (compare) {
             i++;
-            swap_str(country[i], country[j]); // 国名をスワップ
-            swap(&gold[i], &gold[j]);         // 金メダル数をスワップ
-            swap(&silver[i], &silver[j]);     // 銀メダル数をスワップ
-            swap(&bronze[i], &bronze[j]);     // 銅メダル数をスワップ
+            swap_str(data[i].country,data[j].country); // 国名をスワップ
+            swap(&data[i].gold, &data[j].gold);         // 金メダル数をスワップ
+            swap(&data[i].silver, &data[j].silver);     // 銀メダル数をスワップ
+            swap(&data[i].bronze, &data[j].bronze);     // 銅メダル数をスワップ
         }
     }
 
-    swap_str(country[i + 1], country[high]);
-    swap(&gold[i + 1], &gold[high]);
-    swap(&silver[i + 1], &silver[high]);
-    swap(&bronze[i + 1], &bronze[high]);
+    swap_str(data[i + 1].country, data[high].country);
+    swap(&data[i + 1].gold, &data[high].gold);
+    swap(&data[i + 1].silver, &data[high].silver);
+    swap(&data[i + 1].bronze, &data[high].bronze);
 
     return i + 1;
 }
