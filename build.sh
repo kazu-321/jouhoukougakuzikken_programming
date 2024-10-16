@@ -1,0 +1,1 @@
+gcc main.c input.c sort.c show_medalrank.c get_medalrank.c save.c load.c
