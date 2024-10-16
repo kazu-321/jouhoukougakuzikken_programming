@@ -1,6 +1,6 @@
 #include "main.h"
 
-int search(){
+void search(){
     char* name;
 
     printf("国名を入力 >>>"); scanf("%s",name);
@@ -16,7 +16,4 @@ int search(){
             break;
         }
     }
-    
-    return 0;
-
 }
