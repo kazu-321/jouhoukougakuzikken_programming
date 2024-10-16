@@ -10,7 +10,7 @@ int bronze[100];
 int search() {
     char x[30];
 
-    printf("Enter Country Name >>>"); scanf("%s",&x);
+    printf("国名を入力 >>>"); scanf("%s",&x);
     
     for(int i=0;i<=100;i++){
         if(strcmp(x[0],country[0][i])==0){
@@ -19,7 +19,7 @@ int search() {
                     銀：個\n
                     銅%d\n
                     \n
-                    メダル順位%d位\n",x,gold[i],silver[i],brinze[i],//メダル順位の変数)
+                    メダル順位%d位\n",x,gold[i],silver[i],brinze[i],medal_rank[i]);
 
                     break;
         }
