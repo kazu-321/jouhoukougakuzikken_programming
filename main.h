@@ -13,7 +13,7 @@ typedef struct COUNTRY_DATA{
     int medal_rank;
 } country_data_type;
 
-extern country_data_type country_data[100];  // データ構造体
+extern country_data_type data[100];  // データ構造体
 extern int data_size;           // 現在のデータ数
 
 extern int debug_mode;

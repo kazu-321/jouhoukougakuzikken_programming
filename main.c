@@ -1,6 +1,6 @@
 #include "main.h"
 
-country_data_type country_data[100];
+country_data_type data[100];
 int data_size=0;
 int debug_mode=0;
 
@@ -37,7 +37,7 @@ int main(int argc, char* argv[]){
             input();
             printd("input data end\n");
             for(int i=0;i<5;i++) printf("\033[A\033[K");
-            printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,country[data_size-1],gold[data_size-1],silver[data_size-1],bronze[data_size-1],get_medalrank(data_size-1));
+            printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,[data_size-1],gold[data_size-1],silver[data_size-1],bronze[data_size-1],get_medalrank(data_size-1));
         }else if(strcmp(command,"sort")==0){
             printd("sort data\n");
             printf("ソートモードを入力してください 0:国順, 1:金, 2:銀, 3:銅\n>>> ");
