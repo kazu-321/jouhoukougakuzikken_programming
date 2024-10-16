@@ -1,10 +1,6 @@
 #include "main.h"
 
-char country[30][100];
-int gold[100];
-int silver[100];
-int bronze[100];
-int medal_rank[100];
+country_data_type country_data[100];
 int data_size=0;
 int debug_mode=0;
 

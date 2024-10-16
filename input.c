@@ -2,9 +2,9 @@
 
 void input(){
     printf("[NO.%d]\n",data_size+1);
-    printf("国名："); scanf("%s",country[data_size]); 
-    printf("金："); scanf("%d", &gold[data_size]);
-    printf("銀："); scanf("%d", &silver[data_size]);
-    printf("銅："); scanf("%d", &bronze[data_size]);
+    printf("国名："); scanf("%s",country_data[data_size].country); 
+    printf("金："); scanf("%d", &country_data[data_size].gold);
+    printf("銀："); scanf("%d", &country_data[data_size].silver);
+    printf("銅："); scanf("%d", &country_data[data_size].bronze);
     data_size++;
 }

@@ -5,11 +5,15 @@
 #include <string.h>
 #include <stdarg.h>  // 可変引数を処理するために必要
 
-extern char country[30][100];   // 国名
-extern int  gold[100];           // 金メダル
-extern int  silver[100];         // 銀メダル
-extern int  bronze[100];         // 銅メダル
-extern int  medal_rank[100];     // メダルランク順位情報
+typedef struct COUNTRY_DATA{
+    char country[100];
+    int gold;
+    int silver;
+    int bronze;
+    int medal_rank;
+} country_data_type;
+
+extern country_data_type country_data[100];  // データ構造体
 extern int data_size;           // 現在のデータ数
 
 extern int debug_mode;
