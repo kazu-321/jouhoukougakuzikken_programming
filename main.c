@@ -93,7 +93,7 @@ void show(){
     printf("|      国名       |  金  |  銀  |  銅  |ﾒﾀﾞﾙﾗﾝｸ|\n");
     printf("+-----------------+------+------+------+-------+\n");
     for(int i=0;i<data_size;i++){
-        printf("| %15s |  %02d  |  %02d  |  %02d  |  \n",country[i],gold[i],silver[i],bronze[i]);
+        printf("| %15s |  %02d  |  %02d  |  %02d  |  %02d  |\n",country[i],gold[i],silver[i],bronze[i],medal_rank[i]);
     }
     printf("+--------------------------------------+\n");
 }
