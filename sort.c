@@ -62,7 +62,9 @@
 
 // 安定な比較関数
 int compare_by_mode(const country_data_type* a, const country_data_type* b, int mode) {
-    if (mode == 1) {
+    if (mode == 0) {
+        return strcmp(a->country, b->country);   // 国名で昇順
+    } else if (mode == 1) {
         return b->gold - a->gold;   // 金メダル数で降順
     } else if (mode == 2) {
         return b->silver - a->silver;   // 銀メダル数で降順
