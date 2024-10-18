@@ -20,13 +20,16 @@
 
 # ビルドコマンド
 ```bash
-gcc main.c input.c sort.c
+./build.sh
 ```
+もしくは`build.sh`の中身をコピペ
+
 
 # 実行
 ```bash
 ./a.out
 ```
+windowsなら `a.exe`
 
 # デバッグ
 ```bash
