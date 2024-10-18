@@ -4,6 +4,7 @@ void load(char* filename){
     FILE *fp;
     char full_filename[256];
     snprintf(full_filename, sizeof(full_filename), "./data/%s.csv", filename);
+    printd("load file: %s\n", full_filename);
     fp = fopen(full_filename, "r");
     if(fp == NULL){
         printf("ファイルが開けません\n");
