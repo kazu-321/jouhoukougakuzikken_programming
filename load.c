@@ -15,9 +15,9 @@ void load(char* filename){
     printd("header: %s, %s, %s, %s\n", buf[0], buf[1], buf[2], buf[3]);
     data_size = 0;
     while(fscanf(fp, "%[^,],%d,%d,%d\n", data[data_size].country, &data[data_size].gold, &data[data_size].silver, &data[data_size].bronze) != EOF){
-        data[data_size].medal_rank = get_medalrank(data_size);
         printd("load data[%d]: %s %d %d %d %d\n", data_size, data[data_size].country, data[data_size].gold, data[data_size].silver, data[data_size].bronze, data[data_size].medal_rank);
         data_size++;
     }
+    get_medalrank(data_size);
     fclose(fp);
 }

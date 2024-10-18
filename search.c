@@ -12,9 +12,7 @@ void search(){
             printf("金：%2d個\n",data[i].gold);
             printf("銀：%2d個\n",data[i].silver);
             printf("銅：%2d個\n",data[i].bronze);
-
-            break;
+            return;
         }
-        printd("if\n");
     }
 }
