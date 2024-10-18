@@ -58,6 +58,14 @@ int main(int argc, char* argv[]){
             scanf("%s",filename);
             printd("load data start\n");
             load(filename);
+            printd("load data end\n");
+        }else if(strcmp(command,"save")==0){
+            char filename[100];
+            printf("ファイル名を入力してください >>> ");
+            scanf("%s",filename);
+            printd("save data start\n");
+            save(filename);
+            printd("save data end\n");
         }else if(strcmp(command,"exit")==0){
             printd("プログラムを終了します\n");
             break;

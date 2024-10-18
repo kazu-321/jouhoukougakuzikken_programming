@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdlib.h>
+#include <unistd.h>
+// #include <limits.h>
+#include <linux/limits.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>  // 可変引数を処理するために必要
