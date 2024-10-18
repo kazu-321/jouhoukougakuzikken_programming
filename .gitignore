@@ -1,1 +1,4 @@
 a.out
+a.exe
+data/*
+!2024.csv
