@@ -70,6 +70,8 @@ int compare_by_mode(const country_data_type* a, const country_data_type* b, int 
         return b->silver - a->silver;   // 銀メダル数で降順
     } else if (mode == 3) {
         return b->bronze - a->bronze;   // 銅メダル数で降順
+    } else if (mode == 4) {
+        return b->sum - a->sum;   // 合計メダル数で降順
     }
     return 0;  // デフォルトは等しいと見なす
 }

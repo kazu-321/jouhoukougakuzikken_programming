@@ -15,6 +15,7 @@ typedef struct COUNTRY_DATA{
     int silver;
     int bronze;
     int medal_rank;
+    int sum;
 } country_data_type;
 
 extern country_data_type data[1000];  // データ構造体
