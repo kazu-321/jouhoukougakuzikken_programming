@@ -36,5 +36,6 @@ int get_medalrank(int index);   // メダルランク順位を取得する関数
 void show();                    // データ表示関数
 void show_medalrank();          // メダルランク表示関数
 void get_sum();
+void show_sum();
 void show_country();
 #endif
