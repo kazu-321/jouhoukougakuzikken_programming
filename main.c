@@ -40,7 +40,7 @@ int main(int argc, char* argv[]){
             printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,data[data_size-1].country,data[data_size-1].gold,data[data_size-1].silver,data[data_size-1].bronze,get_medalrank(data_size-1));
         }else if(strcmp(command,"sort")==0){
             printd("sort data\n");
-            printf("ソートモードを入力してください 0:国順, 1:金, 2:銀, 3:銅\n>>> ");
+            printf("ソートモードを入力してください 0:国順, 1:金, 2:銀, 3:銅, 4:合計\n>>> ");
             int mode;
             scanf("%d",&mode);
             sort(mode);

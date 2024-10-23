@@ -20,5 +20,6 @@ void load(char* filename){
         data_size++;
     }
     get_medalrank(data_size);
+    get_sum();
     fclose(fp);
 }
