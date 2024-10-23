@@ -27,6 +27,8 @@ int main(int argc, char* argv[]){
             printf("| sort           | データをソートします      |\n");
             printf("| show           | データ一覧を表示します    |\n");
             printf("| show_medalrank | メダルランク順に表示します|\n");
+            printf("| show_country   | 国名順に表示します        |\n");
+            printf("| show_sum       | 合計メダル数順に表示します|\n");
             printf("| search         | データを検索します        |\n");
             printf("| exit           | プログラムを終了します    |\n");
             printf("| load           | データを読み込みます      |\n");
@@ -40,7 +42,7 @@ int main(int argc, char* argv[]){
             printf("追加[%d]: 国名:%s 金:%d 銀:%d 銅:%d, メダルランク:%d\n",data_size,data[data_size-1].country,data[data_size-1].gold,data[data_size-1].silver,data[data_size-1].bronze,get_medalrank(data_size-1));
         }else if(strcmp(command,"sort")==0){
             printd("sort data\n");
-            printf("ソートモードを入力してください 0:国順, 1:金, 2:銀, 3:銅\n>>> ");
+            printf("ソートモードを入力してください 0:国順, 1:金, 2:銀, 3:銅, 4:合計\n>>> ");
             int mode;
             scanf("%d",&mode);
             sort(mode);
@@ -50,6 +52,10 @@ int main(int argc, char* argv[]){
             show();
         }else if(strcmp(command,"show_medalrank")==0){
             show_medalrank();
+        }else if(strcmp(command,"show_country")==0){
+            show_country();
+        }else if(strcmp(command,"show_sum")==0){
+            show_sum();
         }else if(strcmp(command,"search")==0){
             search();
         }else if(strcmp(command,"load")==0){
