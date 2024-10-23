@@ -51,7 +51,7 @@ int main(int argc, char* argv[]){
             show();
         }else if(strcmp(command,"show_medalrank")==0){
             show_medalrank();
-        \else if(strcmp(command,"show_country")==0){
+        }else if(strcmp(command,"show_country")==0){
             show_country();
         }else if(strcmp(command,"search")==0){
             search();
