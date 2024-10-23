@@ -28,6 +28,7 @@ int main(int argc, char* argv[]){
             printf("| show           | データ一覧を表示します    |\n");
             printf("| show_medalrank | メダルランク順に表示します|\n");
             printf("| show_country   | 国名順に表示します        |\n");
+            printf("| show_sum       | 合計メダル数順に表示します|\n");
             printf("| search         | データを検索します        |\n");
             printf("| exit           | プログラムを終了します    |\n");
             printf("| load           | データを読み込みます      |\n");
@@ -53,6 +54,8 @@ int main(int argc, char* argv[]){
             show_medalrank();
         }else if(strcmp(command,"show_country")==0){
             show_country();
+        }else if(strcmp(command,"show_sum")==0){
+            show_sum();
         }else if(strcmp(command,"search")==0){
             search();
         }else if(strcmp(command,"load")==0){
