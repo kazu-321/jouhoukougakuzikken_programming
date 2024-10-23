@@ -1,7 +1,7 @@
 #include "main.h"
 
 void search(){
-    char* name;
+    char[100] name;
 
     printf("国名を入力 >>>"); scanf("%s",name);
     
