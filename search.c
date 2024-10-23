@@ -1,7 +1,7 @@
 #include "main.h"
 
 void search(){
-    char[100] name;
+    char name[100];
 
     printf("国名を入力 >>>"); scanf("%s",name);
     
@@ -10,7 +10,7 @@ void search(){
         printd("if")
         if(strcmp(name,data[i].country)==0){
             printf("国名：%s\n",data[i].country);
-            printf("メダル順位：%2d位",data[i].medal_rank);
+            printf("メダル順位：%2d位\n",data[i].medal_rank);
             printf("金：%2d個\n",data[i].gold);
             printf("銀：%2d個\n",data[i].silver);
             printf("銅：%2d個\n",data[i].bronze);
