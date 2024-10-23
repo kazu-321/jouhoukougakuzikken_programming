@@ -1,6 +1,6 @@
 #include "main.h"
 
-void show_contry(){
+void show_country(){
     sort(0);
     show();
 };
